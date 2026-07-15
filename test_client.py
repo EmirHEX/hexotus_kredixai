@@ -5,12 +5,13 @@ from main import app
 import json
 
 # Uygulamamızın doğruluğunu test eden ana fonksiyonumuz.
-# ornekmusteridata.json dosyasından verileri okuyup ilk 3 müşteri için asenkron api testlerini gerçekleştirir.
-# Başarılı sonuçları ham JSON (test_sonuclari.json) ve rapor formatında (test_sonuclari.md) olarak kaydeder.
+# data/ornekmusteridata.json dosyasından verileri okuyup ilk 3 müşteri için asenkron api testlerini gerçekleştirir.
+# Başarılı sonuçları ham JSON (reports/test_sonuclari.json) ve rapor formatında (reports/test_sonuclari.md) olarak kaydeder.
 def run_test():
     with TestClient(app) as client:
         try:
-            with open("ornekmusteridata.json", "r") as f:
+            # data/ klasörü altındaki mock müşteri verilerini okuyoruz
+            with open("data/ornekmusteridata.json", "r") as f:
                 musteri_listesi = json.load(f)
         except Exception as file_err:
             print(f"Musteri veri dosyasi okunamadi: {str(file_err)}")
@@ -37,15 +38,15 @@ def run_test():
                 print(f"Hata Olustu! Yanit Detayi: {response.text}")
                 
         if basarili_sonuclar:
-            # Sonuçları JSON formatında kaydetme bloğumuz.
+            # Sonuçları reports/ klasörü altında JSON formatında kaydetme bloğumuz.
             try:
-                with open("test_sonuclari.json", "w", encoding="utf-8") as out_file:
+                with open("reports/test_sonuclari.json", "w", encoding="utf-8") as out_file:
                     json.dump(basarili_sonuclar, out_file, indent=2, ensure_ascii=False)
-                print("\n[OK] Tum basarili test sonuclari 'test_sonuclari.json' dosyasina kaydedildi.")
+                print("\n[OK] Tum basarili test sonuclari 'reports/test_sonuclari.json' dosyasina kaydedildi.")
             except Exception as write_err:
                 print(f"\n[ERROR] JSON sonuclar dosyaya yazilamadi: {str(write_err)}")
                 
-            # Sonuçları Markdown formatında kurumsal bir rapor halinde kaydetme bloğumuz.
+            # Sonuçları reports/ klasörü altında Markdown formatında kurumsal bir rapor halinde kaydetme bloğumuz.
             # ,------.,--.   ,--.,--.,------. ,--.  ,--.,------.,--.   ,--.  
             # |  .---'|   `.'   ||  ||  .--. '|  '--'  ||  .---' \  `.'  /   
             # |  `--, |  |'.'|  ||  ||  '--'.'|  .--.  ||  `--,   .'    \   
@@ -123,9 +124,9 @@ def run_test():
                         "---\n\n"
                     )
                     
-                with open("test_sonuclari.md", "w", encoding="utf-8") as out_md_file:
+                with open("reports/test_sonuclari.md", "w", encoding="utf-8") as out_md_file:
                     out_md_file.write(md_content)
-                print("[OK] Tum basarili test sonuclari 'test_sonuclari.md' dosyasina kaydedildi.")
+                print("[OK] Tum basarili test sonuclari 'reports/test_sonuclari.md' dosyasina kaydedildi.")
             except Exception as write_md_err:
                 print(f"[ERROR] Markdown sonuclar dosyaya yazilamadi: {str(write_md_err)}")
 

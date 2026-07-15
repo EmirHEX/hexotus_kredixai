@@ -1,7 +1,7 @@
 [
   {
     "kredi_durumu": "ONAYLANMADI",
-    "musteri_mesaji": "Sayin Ali Koç, kredi basvurunuza su anlik olumlu yanit veremiyoruz. Finansal sagliginizi duzeltmek ve skorumuzu yukseltmek icin fatura odemelerinizi duzenli yapip, 30 gun boyunca 'borc yapilandirma' adimini uygulayarak ilerleyen zamanda tekrar basvurabilirsiniz. Alternatif olarak dilerseniz hemen 'Sektöre Özel Teminatlı Kart' urunumuze basvuru yapabilirsiniz.",
+    "musteri_mesaji": "Sayin Ali Koç, kredi basvurunuza su anlik olumlu yanit veremiyoruz. Finansal sagliginizi duzeltmek ve skorumuzu yukseltmek icin fatura odemelerinizi duzenli yapip, 30 gun boyunca 'Gecikmeli borçları temizleme' adimini uygulayarak ilerleyen zamanda tekrar basvurabilirsiniz. Alternatif olarak dilerseniz hemen 'Sektöre Özel Teminatlı Kart' urunumuze basvuru yapabilirsiniz.",
     "faktor_aciklamalari": {
       "income": "Aylik net gelir. Musterinin borc geri odeme kapasitesinin temel kaynagidir.",
       "savings": "Toplam birikim. Olasi kriz anlarinda guvence saglayan finansal varliklardir.",
@@ -60,50 +60,44 @@
     },
     "agentic_workflow": {
       "audit": {
-        "risk_class": "CRITICAL",
+        "risk_class": "HIGH",
         "root_cause_category": "Gecikmeli Ödemeler",
-        "audit_summary": "Ali Koç, 58 yaşında İnşaat sektöründe faaliyet gösteren bir müşteri. Mükteşematik ödemeleri nedeniyle yüksek risk sınıflandırılmasına yol açan ana faktör 'Gecikmeli Ödemeler' kategorisinde yer almaktadır."
+        "audit_summary": "Ali Koç, 58 yaşındaki İnşaat sektöründe faaliyet gösteren müşteri, gecikmeli ödemeleri ve risk davranış puanı yüksek olduğu için finansal denetimde yüksek rütbelere sahip. Müşterinin aktiflik oranı düşük olmasına rağmen gelir ve varlık seviyeleri etkilidir."
       },
       "strategist": {
         "roadmap_30_days": {
-          "action_steps": [
+          "actions": [
             {
-              "step": 1,
-              "description": "Gecikmeli borçları temizleme.",
-              "priority": "HIGH"
+              "description": "Gecikmeli borçları temizleme",
+              "priority": "HATASIZ",
+              "target_amount": 11076.49,
+              "due_date": "2023-10-31"
             },
             {
-              "step": 2,
-              "description": "Mali durumu incelenmesi ve gerekli düzenlemeler.",
-              "priority": "MEDIUM"
+              "description": "Harca verilen tutarın %5 indirimli olması",
+              "priority": "KARISIK",
+              "target_amount": 0,
+              "due_date": null
             }
           ]
         },
         "roadmap_60_days": {
-          "action_steps": [
+          "actions": [
             {
-              "step": 3,
-              "description": "Sektörel dalgalanmalara karşı acil durum fonu oluşturma.",
-              "priority": "HIGH"
-            },
-            {
-              "step": 4,
-              "description": "Gecikmeli ödeme risklerini azaltma stratejileri belirleme ve uygulama.",
-              "priority": "MEDIUM"
+              "description": "Sektörel dalgalanmalara karşı acil durum fonu oluşturma",
+              "priority": "KARISIK",
+              "target_amount": 5544.07,
+              "due_date": "2023-11-30"
             }
           ]
         },
         "roadmap_90_days": {
-          "action_steps": [
+          "actions": [
             {
-              "step": 5,
-              "description": "Yeni tasarruf alışkanlıkları oluşturma.",
-              "priority": "HIGH"
-            },
-            {
-              "step": 6,
-              "description": "Finansal durumu takip etmek ve gerekli değişiklikleri gerçekleştirmek.",
-              "priority": "MEDIUM"
+              "description": "Yeni tasarruf alışkanlıkları ve skor takibi",
+              "priority": "HATASIZ",
+              "target_amount": null,
+              "due_date": null
             }
           ]
         }
@@ -112,11 +106,11 @@
         "alternative_products": [
           {
             "product_name": "Sektöre Özel Teminatlı Kart",
-            "reason_and_benefits": "Ali Koç'un sektöre özgü ihtiyaçlarına odaklanarak, hem ödeme gecikmelerini azaltmak hem de belirli alışverişlerde tasarrufa ulaşma imkanı sunar. Bu teminatlı kart, müşterinin mali durumunu destekleyerek, daha uygun kredi seçenekleri arama ihtiyacını önler."
+            "reason_and_benefits": "Ali Koç, sektörünun hassas olduğu için gecikmeli ödeme riskini azaltacak bir teminatlı kart seçebilir. Bu ürün, para nakli ve sektörel ihtiyaçların kolaylaştırılmasına yardımcı olur."
           },
           {
             "product_name": "Yaş Grubuna Özel Otomatik Ödemeli Mikro-Limit",
-            "reason_and_benefits": "58 yaşındaki Ali Koç'un ihtiyaçlarına ve mali durumu göz önünde bulundurarak, otomatik ödeme planları sunarak daha uygun bir finansman çözümü teklif edilir. Bu limit, gecikmeli ödemeleri önlemekle birlikte, müşterinin günlük ihtiyaçlarını karşılamasına yardımcı olur."
+            "reason_and_benefits": "58 yaşındaki Ali Koç için otomatik ödeme planı ve mikro-limitler, gecikmeli ödeme riskini azaltacak ve finansman ihtiyaçlarını kolay bir şekilde karşılayacaktır. Bu ürün, belirli bir limitle her ay odemeleri otomatik olarak yapılacak, bu da daha organize ve düzenli ödemeyi sağlar."
           }
         ]
       }
@@ -124,7 +118,7 @@
   },
   {
     "kredi_durumu": "ONAYLANMADI",
-    "musteri_mesaji": "Sayin Murat Demir, kredi basvurunuza su anlik olumlu yanit veremiyoruz. Finansal sagliginizi duzeltmek ve skorumuzu yukseltmek icin fatura odemelerinizi duzenli yapip, 30 gun boyunca 'Müşterinin 45 gün gecikmeli odeme durumundan kurtulması için en kısa sürede borçlarla ilgili geri dönüşleri sağlama.' adimini uygulayarak ilerleyen zamanda tekrar basvurabilirsiniz. Alternatif olarak dilerseniz hemen 'Yaş Grubuna Özel Otomatik Ödemeli Mikro-Limit' urunumuze basvuru yapabilirsiniz.",
+    "musteri_mesaji": "Sayin Murat Demir, kredi basvurunuza su anlik olumlu yanit veremiyoruz. Finansal sagliginizi duzeltmek ve skorumuzu yukseltmek icin fatura odemelerinizi duzenli yapip, 30 gun boyunca 'Geçmiş gecikmeli ödemeleri tamamlayarak borç yükünü azaltın. Bu, Murat Demir için hemen etkili olabilir ve finansal kurtuluşa yakın olma sürecini hızlandırır.' adimini uygulayarak ilerleyen zamanda tekrar basvurabilirsiniz. Alternatif olarak dilerseniz hemen 'Yaş Grubuna Özel Otomatik Ödemeli Mikro-Limit' urunumuze basvuru yapabilirsiniz.",
     "faktor_aciklamalari": {
       "income": "Aylik net gelir. Musterinin borc geri odeme kapasitesinin temel kaynagidir.",
       "savings": "Toplam birikim. Olasi kriz anlarinda guvence saglayan finansal varliklardir.",
@@ -181,33 +175,33 @@
       "audit": {
         "risk_class": "HIGH",
         "root_cause_category": "Gecikmeli Ödemeler",
-        "audit_summary": "Murat Demir, 60 yaşındaki Gıda sektöründeki müşteri, 45 gün gecikmeli ödeme durumuna sahip olmasından yüksek risk sınıflandırılmıştır. Ayrıca kredinin süresi ve borç seviyesi de risk faktörlerine katkı sağlamaktadır. Ancak, likidite oranı ve odeme kapasitesi düşük SHAP değerleri ile birlikte daha düşük risklere işaret ediyor."
+        "audit_summary": "Murat Demir, 60 yaşındaki gişe sektöründeki bir müşteri, finansal denetimde yüksek gecikmeli ödeme riski ve borç seviyesi ile karşılaştı. Delinquency_days ve loan_duration faktörleri riski artırmaktadır. Bununla birlikte,liquidity_ratio ve delinquency_days faktörlerinde pozitif etkiler olduğu gözlenmektedir."
       },
       "strategist": {
         "roadmap_30_days": [
           {
             "action": "Gecikmiş borçları temizleme",
-            "description": "Müşterinin 45 gün gecikmeli odeme durumundan kurtulması için en kısa sürede borçlarla ilgili geri dönüşleri sağlama."
+            "description": "Geçmiş gecikmeli ödemeleri tamamlayarak borç yükünü azaltın. Bu, Murat Demir için hemen etkili olabilir ve finansal kurtuluşa yakın olma sürecini hızlandırır."
           },
           {
             "action": "Harcama kısıntısı",
-            "description": "Gecikmeli ödeme sorununu önlemek ve finansal muhasebenin düzenlenmesi için harcamaları kontrol etme ve gerekli kesintiler yapma."
+            "description": "Gece harcamalarını gözden geçirip gecikmeli ödeme riskini azaltmak için bir harcama planı oluşturun. Bu, gelirin daha iyi kullanılmasına yardımcı olur."
           }
         ],
         "roadmap_60_days": [
           {
             "action": "Sektörel dalgalanmalara karşı acil durum fonu oluşturma",
-            "description": "Müşterinin sektördeki dinamiklere uyum sağlama ve gelecekte olası finansal krizlerle mücadele için bir acil durum fonu oluşturması."
+            "description": "Gida sektörünün dinamiklerine uygun bir acil durum fonu oluşturun. Bu, ekonomik istikrarsızlıklar karşısında finansal güvenliği korumayı sağlar."
           }
         ],
         "roadmap_90_days": [
           {
             "action": "Yeni tasarruf alışkanlıkları",
-            "description": "Müşterinin tasarruf习惯地将客户名称和行业动态信息纳入建议中可能会导致敏感性问题。因此，我将以通用术语编写行动计划。以下是根据提供的数据生成的JSON对象："
+            "description": "Bir tasarruf planı oluşturup, hedefli yatırımı gerçekleştirerek mali muhasebeciliği geliştirmeye devam edin. Bu, finansal durumunizi daha da sağlamlaştırır."
           },
           {
-            "action": "SKOR takibi",
-            "description": "Müşterinin finansal durumunun genel bir göstergesi olan skorlarını düzenli olarak kontrol etme ve gerekli düzeltmeler yapma."
+            "action": "Skor takibi",
+            "description": "Kredi skoru ve genel finansal sağlıkını takip etmek için düzenli denetimlere katılın. Bu, risk yönetimi ve kredi kabul olasılığının artmasına yardımcı olur."
           }
         ]
       },
@@ -215,11 +209,11 @@
         "alternative_products": [
           {
             "product_name": "Yaş Grubuna Özel Otomatik Ödemeli Mikro-Limit",
-            "reason_and_benefits": "Murat Demir'ın yaş ve kredi durumu, otomatik ödeme planı ile daha uygun olabilir. Bu ürün, belirlenen miktar ve süre boyunca her ay otomatik olarak ödemesi yapar, böylece gecikmeli ödeme riskini azaltmayı sağlar."
+            "reason_and_benefits": "Bu mikro-limitTED product, Murat Demir gibi yaş grubunuzdaki müşteriler için uygun bir seçenektir. Otomatik ödeme sistemiyle gecikmeleri önlenmeye çalışılır ve finansal yükümlülüklerin azaltılmasına yardımcı olur."
           },
           {
             "product_name": "Sektöre Özel Teminatlı Kart",
-            "reason_and_benefits": "Gida sektöründe çalışan Murat Demir için, teminatlı bir kart sunarak para masraflarını kontrol edebilir. Bu tarz karta sahip olmak, maddi giderlerini yönetme imkanı sağlar ve gecikmeli ödeme riskini azaltır."
+            "reason_and_benefits": "Gıda sektöründe çalışan Murat Demir için özel olarak tasarlanmış teminatlı bir karta sahip olabilir. Bu, gecikmeli ödemeleri azaltacak ve finansal güvenliği artıracaktır."
           }
         ]
       }
@@ -288,49 +282,31 @@
       "audit": {
         "risk_class": "LOW",
         "root_cause_category": "Gecikmeli Ödemeler",
-        "audit_summary": "Zeynep Koç, 37 yaşındaki tarım sektöründen faaliyet gösteren müşteri, finansal denetim sonucu düşük bir risk sınıflandırması aldı. Ancak gecikmeli ödeme faktörü, kredi onayı üzerinde pozitif etki yapan diğer faktörleri neredeyse ortadan kaldırdı."
+        "audit_summary": "Zeynep Koç, 37 yaşında tarım sektöründeki bir müşteri, düşük gecikmeli ödeme faktörü ve yüksek gelir-oranlı varlıklı olarak değerlendirmenin riski düşük. Ancak, aylık borc ödemelerinin yüksek olması bu durumu etkiliyor."
       },
       "strategist": {
-        "roadmap_30_days": [
-          {
-            "step": "Gecikmeli Ödeme Kontrolü",
-            "description": "Zeynep Koç'un tüm borçlarını kontrol ederek gecikmeli odemeleri temizlemeye başlamalı. 30 günlük süreçteki ödemelerin tamamını gerçekleştirmelidir."
-          },
-          {
-            "step": "Harcamayı Düşünce Kısıntılar",
-            "description": "Zeynep Koç'un giderlerini inceleyerek, mali durumunu tehlikeye düşüren harcamaları azaltma veya tamamen kesme kararı almalıdır."
-          }
-        ],
-        "roadmap_60_days": [
-          {
-            "step": "Acil Durum Fonu Oluşturma",
-            "description": "Sektörel dalgalanmalara karşı acil durum fonu oluşturmak için Zeynep Koç'un kayda değer gelirlerinden bir kısmını yedeklemelidir. 60 günlük süreçte bu fonun minimum %10'sını oluşturmalıdır."
-          },
-          {
-            "step": "Kredi Yüzde Değerlendirme",
-            "description": "Zeynep Koç'un mevcut kredilerinin yıllık geliri karşılaştırmalı ve gereksiz olanları tamamıyla geri çekmeli veya yeniden görüşmelidir."
-          }
-        ],
-        "roadmap_90_days": [
-          {
-            "step": "Tasarruf Alışkanlıkları Kullanma",
-            "description": "Zeynep Koç'un tasarruf alışkanlıklarını geliştirmeye çalışmalı, her ay tahsisi veya para eklerine %10'unda bir miktar tasarruf yapmalıdır."
-          },
-          {
-            "step": "Finansal Takibi Takip Etme",
-            "description": "Zeynep Koç'un finansal durumu için düzenli takip mekanizması oluşturmalı ve kredi score'una gerekli adımları atmalıdır. "
-          }
-        ]
+        "roadmap_30_days": {
+          "step_1": "Harcama kısıntısı uygulama",
+          "step_2": "Gecikmiş borcun temizlenmesi"
+        },
+        "roadmap_60_days": {
+          "step_1": "Sektörel dalgalanmalara karşı acil durum fonu oluşturma",
+          "step_2": "Yeni tasarruf alışkanlıkları benimseme"
+        },
+        "roadmap_90_days": {
+          "step_1": "Skor takibi ve iyileştirme",
+          "step_2": "Yeni yatırım fırsatlarının değerlendirilmesi"
+        }
       },
       "retention": {
         "alternative_products": [
           {
             "product_name": "Tarım Sektöre Özel Teminatlı Kart",
-            "reason_and_benefits": "Bu teminatlı kart, Zeynep Koç'un mevcut mali durumunu ve tarım sektörünün belirli ihtiyaçlarını karşılamaya richtelidir. Teminatlı olma niteliği sayesinde kredi riski minimalleştirilir. Ek olarak, vergi dairesinden faydalanmak için biriktirdiği tasarrufları kolayca kullanılabilir."
+            "reason_and_benefits": "Zeynep Koç'un tarım sektöründe çalışan olması, bu özel teminatlı kart için ideal bir profil oluşturuyor. Ürünün teminatlı yetenekleri, ihtiyaç duyulan malzemeleri ödemeye yardımcı olacak ve aynı zamanda bankaya güvenli bir risk sunacak."
           },
           {
             "product_name": "Yaş Grubuna Özel Otomatik Ödemeli Mikro-Limit",
-            "reason_and_benefits": "Zeynep Koç'un 37 yaşındaki yaş grubuna özel olarak tasarlanmış bu limit, belirli bir bütçe içinde daha kolay ve uygun ödeme yapma imkanı sunar. Otomatik ödeme planı ile finansal disiplini geliştirebilir, riski de azaltır."
+            "reason_and_benefits": "Zeynep Koç'un 37 yaşında olması, otomatik ödeme yapma yeteneğini ve ekonomik istikrarı gösteriyor. Bu ürün, aylık borc odeme yükünün azaltılmasına yardımcı olacak ve aynı zamanda bankaya güvenli bir finansman seçenek sunacaktır."
           }
         ]
       }

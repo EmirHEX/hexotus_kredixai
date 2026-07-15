@@ -83,14 +83,14 @@ Uygulama ayağa kalkarken otomatik olarak sentetik veri kümesi oluşturup XGBoo
 
 ## 🧪 API Test Etme
 
-Sistemle entegrasyonu test etmek için proje ana dizinindeki `ornekmusteridata.json` dosyasından 100 adet müşteri verisi okunur. Ardından projedeki [test_client.py](test_client.py) dosyası çalıştırılarak bu veriler üzerinde asenkron testler gerçekleştirilir:
+Sistemle entegrasyonu test etmek için proje ana dizinindeki `data/ornekmusteridata.json` dosyasından 100 adet müşteri verisi okunur. Ardından projedeki [test_client.py](test_client.py) dosyası çalıştırılarak bu veriler üzerinde asenkron testler gerçekleştirilir:
 ```bash
 python test_client.py
 ```
 
 Test başarıyla tamamlandıktan sonra, elde edilen tüm başarılı model ve ajantik akış yanıtları otomatik olarak proje ana dizininde aşağıdaki formatlarda kaydedilir:
-1.  **`test_sonuclari.json`**: API'den dönen ham yanıtların JSON geçmişi.
-2.  **`test_sonuclari.md`**: Finansal faktörlerin ne anlama geldiğini açıklayan terimler sözlüğü, kredi onay/red statüsü ve her müşteri için özel olarak üretilmiş "Müşteriye Gösterilecek Mesaj" bölümlerini içeren şık ve kurumsal test raporu.
+1.  **`reports/test_sonuclari.json`**: API'den dönen ham yanıtların JSON geçmişi.
+2.  **`reports/test_sonuclari.md`**: Finansal faktörlerin ne anlama geldiğini açıklayan terimler sözlüğü, kredi onay/red statüsü ve her müşteri için özel olarak üretilmiş "Müşteriye Gösterilecek Mesaj" bölümlerini içeren şık ve kurumsal test raporu.
 
 ### Örnek İstek Gövdesi (Request Body)
 `POST /score` endpoint'ine gönderilecek JSON verisi:
