@@ -1,0 +1,339 @@
+[
+  {
+    "kredi_durumu": "ONAYLANMADI",
+    "musteri_mesaji": "Sayin Ali Koç, kredi basvurunuza su anlik olumlu yanit veremiyoruz. Finansal sagliginizi duzeltmek ve skorumuzu yukseltmek icin fatura odemelerinizi duzenli yapip, 30 gun boyunca 'borc yapilandirma' adimini uygulayarak ilerleyen zamanda tekrar basvurabilirsiniz. Alternatif olarak dilerseniz hemen 'Sektöre Özel Teminatlı Kart' urunumuze basvuru yapabilirsiniz.",
+    "faktor_aciklamalari": {
+      "income": "Aylik net gelir. Musterinin borc geri odeme kapasitesinin temel kaynagidir.",
+      "savings": "Toplam birikim. Olasi kriz anlarinda guvence saglayan finansal varliklardir.",
+      "debt": "Mevcut toplam borc. Musterinin bankacilik sistemindeki toplam yukumluluk buyuklugudur.",
+      "monthly_debt_payment": "Aylik borc odemesi. Aylik gelirden diger borclar icin ayrilan nakit ciktisidir.",
+      "inquiry_count": "Son 6 aydaki sorgu sayisi. Son donemdeki acil nakit/kredi arayis sikligini (riskini) gosterir.",
+      "sector_risk_index": "Sektorel risk endeksi. Faaliyet gosterilen sektorun ekonomik kirilganlik derecesidir.",
+      "delinquency_days": "Gecikme gun sayisi. Gecmis odeme ahlakini gosteren en kritik risk faktorudur.",
+      "liquidity_ratio": "Likidite orani. Birikimlerin toplam borca oranidir; acil nakit gucunu olcer.",
+      "dscr": "Borc servis karsilama orani. Gelirin aylik borc odemesine oranidir; nakit akis kapasitesidir.",
+      "risk_behavior_score": "Risk davranis skoru. Gecikme gunu ve sorgularin birlesik risk puanini ifade eder."
+    },
+    "client_data": {
+      "customer_name": "Ali Koç",
+      "sector_name": "İnşaat",
+      "age": 58,
+      "delinquency_days": 60,
+      "income": 55440.68,
+      "savings": 133109.31,
+      "debt": 116373.01,
+      "monthly_debt_payment": 11076.49,
+      "inquiry_count": 6,
+      "sector_risk_index": 0.85,
+      "loan_amount": 269451.46,
+      "loan_duration": 24,
+      "liquidity_ratio": 1.1438061642801516,
+      "dscr": 5.00480524017625,
+      "risk_behavior_score": 60.0
+    },
+    "shap_explanation": {
+      "probability": 0.981806755065918,
+      "negative_factors": [
+        {
+          "feature": "delinquency_days",
+          "shap_value": 4.628952980041504
+        },
+        {
+          "feature": "risk_behavior_score",
+          "shap_value": 0.8815363645553589
+        },
+        {
+          "feature": "inquiry_count",
+          "shap_value": 0.6285385489463806
+        }
+      ],
+      "positive_factors": [
+        {
+          "feature": "liquidity_ratio",
+          "shap_value": -0.24868890643119812
+        },
+        {
+          "feature": "dscr",
+          "shap_value": -0.13240891695022583
+        }
+      ]
+    },
+    "agentic_workflow": {
+      "audit": {
+        "risk_class": "CRITICAL",
+        "root_cause_category": "Gecikmeli Ödemeler",
+        "audit_summary": "Ali Koç, 58 yaşında İnşaat sektöründe faaliyet gösteren bir müşteri. Mükteşematik ödemeleri nedeniyle yüksek risk sınıflandırılmasına yol açan ana faktör 'Gecikmeli Ödemeler' kategorisinde yer almaktadır."
+      },
+      "strategist": {
+        "roadmap_30_days": {
+          "action_steps": [
+            {
+              "step": 1,
+              "description": "Gecikmeli borçları temizleme.",
+              "priority": "HIGH"
+            },
+            {
+              "step": 2,
+              "description": "Mali durumu incelenmesi ve gerekli düzenlemeler.",
+              "priority": "MEDIUM"
+            }
+          ]
+        },
+        "roadmap_60_days": {
+          "action_steps": [
+            {
+              "step": 3,
+              "description": "Sektörel dalgalanmalara karşı acil durum fonu oluşturma.",
+              "priority": "HIGH"
+            },
+            {
+              "step": 4,
+              "description": "Gecikmeli ödeme risklerini azaltma stratejileri belirleme ve uygulama.",
+              "priority": "MEDIUM"
+            }
+          ]
+        },
+        "roadmap_90_days": {
+          "action_steps": [
+            {
+              "step": 5,
+              "description": "Yeni tasarruf alışkanlıkları oluşturma.",
+              "priority": "HIGH"
+            },
+            {
+              "step": 6,
+              "description": "Finansal durumu takip etmek ve gerekli değişiklikleri gerçekleştirmek.",
+              "priority": "MEDIUM"
+            }
+          ]
+        }
+      },
+      "retention": {
+        "alternative_products": [
+          {
+            "product_name": "Sektöre Özel Teminatlı Kart",
+            "reason_and_benefits": "Ali Koç'un sektöre özgü ihtiyaçlarına odaklanarak, hem ödeme gecikmelerini azaltmak hem de belirli alışverişlerde tasarrufa ulaşma imkanı sunar. Bu teminatlı kart, müşterinin mali durumunu destekleyerek, daha uygun kredi seçenekleri arama ihtiyacını önler."
+          },
+          {
+            "product_name": "Yaş Grubuna Özel Otomatik Ödemeli Mikro-Limit",
+            "reason_and_benefits": "58 yaşındaki Ali Koç'un ihtiyaçlarına ve mali durumu göz önünde bulundurarak, otomatik ödeme planları sunarak daha uygun bir finansman çözümü teklif edilir. Bu limit, gecikmeli ödemeleri önlemekle birlikte, müşterinin günlük ihtiyaçlarını karşılamasına yardımcı olur."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kredi_durumu": "ONAYLANMADI",
+    "musteri_mesaji": "Sayin Murat Demir, kredi basvurunuza su anlik olumlu yanit veremiyoruz. Finansal sagliginizi duzeltmek ve skorumuzu yukseltmek icin fatura odemelerinizi duzenli yapip, 30 gun boyunca 'Müşterinin 45 gün gecikmeli odeme durumundan kurtulması için en kısa sürede borçlarla ilgili geri dönüşleri sağlama.' adimini uygulayarak ilerleyen zamanda tekrar basvurabilirsiniz. Alternatif olarak dilerseniz hemen 'Yaş Grubuna Özel Otomatik Ödemeli Mikro-Limit' urunumuze basvuru yapabilirsiniz.",
+    "faktor_aciklamalari": {
+      "income": "Aylik net gelir. Musterinin borc geri odeme kapasitesinin temel kaynagidir.",
+      "savings": "Toplam birikim. Olasi kriz anlarinda guvence saglayan finansal varliklardir.",
+      "debt": "Mevcut toplam borc. Musterinin bankacilik sistemindeki toplam yukumluluk buyuklugudur.",
+      "monthly_debt_payment": "Aylik borc odemesi. Aylik gelirden diger borclar icin ayrilan nakit ciktisidir.",
+      "inquiry_count": "Son 6 aydaki sorgu sayisi. Son donemdeki acil nakit/kredi arayis sikligini (riskini) gosterir.",
+      "sector_risk_index": "Sektorel risk endeksi. Faaliyet gosterilen sektorun ekonomik kirilganlik derecesidir.",
+      "delinquency_days": "Gecikme gun sayisi. Gecmis odeme ahlakini gosteren en kritik risk faktorudur.",
+      "liquidity_ratio": "Likidite orani. Birikimlerin toplam borca oranidir; acil nakit gucunu olcer.",
+      "dscr": "Borc servis karsilama orani. Gelirin aylik borc odemesine oranidir; nakit akis kapasitesidir.",
+      "risk_behavior_score": "Risk davranis skoru. Gecikme gunu ve sorgularin birlesik risk puanini ifade eder."
+    },
+    "client_data": {
+      "customer_name": "Murat Demir",
+      "sector_name": "Gıda",
+      "age": 60,
+      "delinquency_days": 45,
+      "income": 122463.52,
+      "savings": 143044.76,
+      "debt": 61270.44,
+      "monthly_debt_payment": 4505.38,
+      "inquiry_count": 1,
+      "sector_risk_index": 0.35,
+      "loan_amount": 163119.54,
+      "loan_duration": 48,
+      "liquidity_ratio": 2.3346074451653167,
+      "dscr": 27.17558661275791,
+      "risk_behavior_score": 34.5
+    },
+    "shap_explanation": {
+      "probability": 0.0019154585897922516,
+      "negative_factors": [
+        {
+          "feature": "loan_duration",
+          "shap_value": 0.028777915984392166
+        },
+        {
+          "feature": "debt",
+          "shap_value": 0.001961768139153719
+        }
+      ],
+      "positive_factors": [
+        {
+          "feature": "delinquency_days",
+          "shap_value": -1.2738991975784302
+        },
+        {
+          "feature": "liquidity_ratio",
+          "shap_value": -0.7469323873519897
+        }
+      ]
+    },
+    "agentic_workflow": {
+      "audit": {
+        "risk_class": "HIGH",
+        "root_cause_category": "Gecikmeli Ödemeler",
+        "audit_summary": "Murat Demir, 60 yaşındaki Gıda sektöründeki müşteri, 45 gün gecikmeli ödeme durumuna sahip olmasından yüksek risk sınıflandırılmıştır. Ayrıca kredinin süresi ve borç seviyesi de risk faktörlerine katkı sağlamaktadır. Ancak, likidite oranı ve odeme kapasitesi düşük SHAP değerleri ile birlikte daha düşük risklere işaret ediyor."
+      },
+      "strategist": {
+        "roadmap_30_days": [
+          {
+            "action": "Gecikmiş borçları temizleme",
+            "description": "Müşterinin 45 gün gecikmeli odeme durumundan kurtulması için en kısa sürede borçlarla ilgili geri dönüşleri sağlama."
+          },
+          {
+            "action": "Harcama kısıntısı",
+            "description": "Gecikmeli ödeme sorununu önlemek ve finansal muhasebenin düzenlenmesi için harcamaları kontrol etme ve gerekli kesintiler yapma."
+          }
+        ],
+        "roadmap_60_days": [
+          {
+            "action": "Sektörel dalgalanmalara karşı acil durum fonu oluşturma",
+            "description": "Müşterinin sektördeki dinamiklere uyum sağlama ve gelecekte olası finansal krizlerle mücadele için bir acil durum fonu oluşturması."
+          }
+        ],
+        "roadmap_90_days": [
+          {
+            "action": "Yeni tasarruf alışkanlıkları",
+            "description": "Müşterinin tasarruf习惯地将客户名称和行业动态信息纳入建议中可能会导致敏感性问题。因此，我将以通用术语编写行动计划。以下是根据提供的数据生成的JSON对象："
+          },
+          {
+            "action": "SKOR takibi",
+            "description": "Müşterinin finansal durumunun genel bir göstergesi olan skorlarını düzenli olarak kontrol etme ve gerekli düzeltmeler yapma."
+          }
+        ]
+      },
+      "retention": {
+        "alternative_products": [
+          {
+            "product_name": "Yaş Grubuna Özel Otomatik Ödemeli Mikro-Limit",
+            "reason_and_benefits": "Murat Demir'ın yaş ve kredi durumu, otomatik ödeme planı ile daha uygun olabilir. Bu ürün, belirlenen miktar ve süre boyunca her ay otomatik olarak ödemesi yapar, böylece gecikmeli ödeme riskini azaltmayı sağlar."
+          },
+          {
+            "product_name": "Sektöre Özel Teminatlı Kart",
+            "reason_and_benefits": "Gida sektöründe çalışan Murat Demir için, teminatlı bir kart sunarak para masraflarını kontrol edebilir. Bu tarz karta sahip olmak, maddi giderlerini yönetme imkanı sağlar ve gecikmeli ödeme riskini azaltır."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "kredi_durumu": "ONAYLANDI",
+    "musteri_mesaji": "Sayin Zeynep Koç, yaptigimiz degerlendirmeler sonucunda kredi basvurunuz olumlu yanitlanmistir. Kredinizi dilediginiz zaman mobil subemizden hemen kullanabilirsiniz.",
+    "faktor_aciklamalari": {
+      "income": "Aylik net gelir. Musterinin borc geri odeme kapasitesinin temel kaynagidir.",
+      "savings": "Toplam birikim. Olasi kriz anlarinda guvence saglayan finansal varliklardir.",
+      "debt": "Mevcut toplam borc. Musterinin bankacilik sistemindeki toplam yukumluluk buyuklugudur.",
+      "monthly_debt_payment": "Aylik borc odemesi. Aylik gelirden diger borclar icin ayrilan nakit ciktisidir.",
+      "inquiry_count": "Son 6 aydaki sorgu sayisi. Son donemdeki acil nakit/kredi arayis sikligini (riskini) gosterir.",
+      "sector_risk_index": "Sektorel risk endeksi. Faaliyet gosterilen sektorun ekonomik kirilganlik derecesidir.",
+      "delinquency_days": "Gecikme gun sayisi. Gecmis odeme ahlakini gosteren en kritik risk faktorudur.",
+      "liquidity_ratio": "Likidite orani. Birikimlerin toplam borca oranidir; acil nakit gucunu olcer.",
+      "dscr": "Borc servis karsilama orani. Gelirin aylik borc odemesine oranidir; nakit akis kapasitesidir.",
+      "risk_behavior_score": "Risk davranis skoru. Gecikme gunu ve sorgularin birlesik risk puanini ifade eder."
+    },
+    "client_data": {
+      "customer_name": "Zeynep Koç",
+      "sector_name": "Tarım",
+      "age": 37,
+      "delinquency_days": 0,
+      "income": 138200.78,
+      "savings": 174957.91,
+      "debt": 722.98,
+      "monthly_debt_payment": 14715.74,
+      "inquiry_count": 3,
+      "sector_risk_index": 0.55,
+      "loan_amount": 310641.53,
+      "loan_duration": 48,
+      "liquidity_ratio": 241.66124754827482,
+      "dscr": 9.390719683843026,
+      "risk_behavior_score": 9.0
+    },
+    "shap_explanation": {
+      "probability": 0.0023545047733932734,
+      "negative_factors": [
+        {
+          "feature": "monthly_debt_payment",
+          "shap_value": 0.1673826277256012
+        },
+        {
+          "feature": "savings",
+          "shap_value": 0.13568124175071716
+        },
+        {
+          "feature": "loan_amount",
+          "shap_value": 0.04314877465367317
+        }
+      ],
+      "positive_factors": [
+        {
+          "feature": "risk_behavior_score",
+          "shap_value": -1.476624608039856
+        },
+        {
+          "feature": "delinquency_days",
+          "shap_value": -1.2497614622116089
+        }
+      ]
+    },
+    "agentic_workflow": {
+      "audit": {
+        "risk_class": "LOW",
+        "root_cause_category": "Gecikmeli Ödemeler",
+        "audit_summary": "Zeynep Koç, 37 yaşındaki tarım sektöründen faaliyet gösteren müşteri, finansal denetim sonucu düşük bir risk sınıflandırması aldı. Ancak gecikmeli ödeme faktörü, kredi onayı üzerinde pozitif etki yapan diğer faktörleri neredeyse ortadan kaldırdı."
+      },
+      "strategist": {
+        "roadmap_30_days": [
+          {
+            "step": "Gecikmeli Ödeme Kontrolü",
+            "description": "Zeynep Koç'un tüm borçlarını kontrol ederek gecikmeli odemeleri temizlemeye başlamalı. 30 günlük süreçteki ödemelerin tamamını gerçekleştirmelidir."
+          },
+          {
+            "step": "Harcamayı Düşünce Kısıntılar",
+            "description": "Zeynep Koç'un giderlerini inceleyerek, mali durumunu tehlikeye düşüren harcamaları azaltma veya tamamen kesme kararı almalıdır."
+          }
+        ],
+        "roadmap_60_days": [
+          {
+            "step": "Acil Durum Fonu Oluşturma",
+            "description": "Sektörel dalgalanmalara karşı acil durum fonu oluşturmak için Zeynep Koç'un kayda değer gelirlerinden bir kısmını yedeklemelidir. 60 günlük süreçte bu fonun minimum %10'sını oluşturmalıdır."
+          },
+          {
+            "step": "Kredi Yüzde Değerlendirme",
+            "description": "Zeynep Koç'un mevcut kredilerinin yıllık geliri karşılaştırmalı ve gereksiz olanları tamamıyla geri çekmeli veya yeniden görüşmelidir."
+          }
+        ],
+        "roadmap_90_days": [
+          {
+            "step": "Tasarruf Alışkanlıkları Kullanma",
+            "description": "Zeynep Koç'un tasarruf alışkanlıklarını geliştirmeye çalışmalı, her ay tahsisi veya para eklerine %10'unda bir miktar tasarruf yapmalıdır."
+          },
+          {
+            "step": "Finansal Takibi Takip Etme",
+            "description": "Zeynep Koç'un finansal durumu için düzenli takip mekanizması oluşturmalı ve kredi score'una gerekli adımları atmalıdır. "
+          }
+        ]
+      },
+      "retention": {
+        "alternative_products": [
+          {
+            "product_name": "Tarım Sektöre Özel Teminatlı Kart",
+            "reason_and_benefits": "Bu teminatlı kart, Zeynep Koç'un mevcut mali durumunu ve tarım sektörünün belirli ihtiyaçlarını karşılamaya richtelidir. Teminatlı olma niteliği sayesinde kredi riski minimalleştirilir. Ek olarak, vergi dairesinden faydalanmak için biriktirdiği tasarrufları kolayca kullanılabilir."
+          },
+          {
+            "product_name": "Yaş Grubuna Özel Otomatik Ödemeli Mikro-Limit",
+            "reason_and_benefits": "Zeynep Koç'un 37 yaşındaki yaş grubuna özel olarak tasarlanmış bu limit, belirli bir bütçe içinde daha kolay ve uygun ödeme yapma imkanı sunar. Otomatik ödeme planı ile finansal disiplini geliştirebilir, riski de azaltır."
+          }
+        ]
+      }
+    }
+  }
+]
